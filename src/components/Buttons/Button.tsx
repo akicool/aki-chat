@@ -4,9 +4,10 @@ import React, { ReactNode } from "react";
 type Props = {
   children?: ReactNode;
   className?: string;
+  onClick?: () => void;
 };
 
-export const Button = ({ children, className }: Props) => {
+export const Button = ({ children, className, onClick }: Props) => {
   return (
     <ButtonMantine
       variant="filled"
@@ -15,6 +16,7 @@ export const Button = ({ children, className }: Props) => {
       radius="xl"
       className={className}
       w="100%"
+      onClick={onClick}
     >
       {children}
     </ButtonMantine>

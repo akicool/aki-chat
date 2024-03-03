@@ -2,25 +2,18 @@ import { useState } from "react";
 import { IconSend } from "@tabler/icons-react";
 import clsx from "clsx";
 
-import { useSendMessage } from "@/store";
-
 import { Button } from "../Buttons/Button";
 
 type Props = {
-  onUpdateMessage: Promise<void>;
+  // onUpdateMessage: Promise<void>;
 };
 
-export const Input = ({ onUpdateMessage }: Props) => {
-  //   const firstName = useSendMessage((state) => state.message);
-  const sendMessage = useSendMessage((state) => state.updateMessage);
-
+export const Input = (props: Props) => {
   const [message, setMessage] = useState("");
 
   const handleSendMessage = () => {
     if (message.trim() !== "") {
-      sendMessage(message);
       setMessage("");
-      onUpdateMessage;
     }
   };
 
@@ -37,7 +30,7 @@ export const Input = ({ onUpdateMessage }: Props) => {
 
         <button
           className={clsx(
-            "btn btn-active btn-accent w-git h-fit rounded-full opacity-0 transition duration-300",
+            "w-git btn btn-accent btn-active h-fit rounded-full opacity-0 transition duration-300",
             message.trim() != "" && "opacity-100",
           )}
           onClick={handleSendMessage}

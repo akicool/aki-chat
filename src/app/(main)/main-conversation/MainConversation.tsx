@@ -2,16 +2,15 @@ import { Input } from "@/components/Inputs/Input";
 import React from "react";
 
 type Props = {
-  message: string;
-  onUpdateMessage: Promise<void>;
+  // message: string;
+  // onUpdateMessage: Promise<void>;
 };
 
-const MainConversation = ({ message, onUpdateMessage }: Props) => {
+const MainConversation = (props: Props) => {
   return (
     <>
       <div className="grid h-full w-full items-end">
-        {message}
-        <Input onUpdateMessage={onUpdateMessage} />
+        <Input />
       </div>
     </>
   );

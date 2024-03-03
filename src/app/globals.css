@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* start new chat button */
 .self .mantine-Button-label {
   @apply gap-3;
