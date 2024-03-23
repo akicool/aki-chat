@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+![akihiro chat](https://github.com/akicool/aki_chat/assets/110607434/eb407bae-a56b-4f2c-90e2-4e76f4f279b6)
+
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`aki_chat`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
