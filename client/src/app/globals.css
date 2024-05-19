@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* start new chat button */
+.self .mantine-Button-label {
+  @apply gap-3;
+}
+
+/* tabs */
+.self .mantine-Tabs-list {
+  @apply flex flex-col gap-3;
+}
+.self .mantine-Tabs-tab {
+  @apply justify-start;
+}
+.self .m-539e827b[data-active] {
+  @apply rounded-xl bg-[rgb(14,152,136)] bg-opacity-40;
+}
+.self .mantine-Tabs-panel {
+  @apply !block;
+}
+
+/* segment control */
+.self .mantine-SegmentedControl-root {
+  @apply w-full;
+}
+.self .mantine-SegmentedControl-label {
+  @apply p-0;
+}
+
+/* center (tag) */
+.self .mantine-Center-root {
+  @apply flex w-full justify-start space-x-4 p-5 text-lg;
+}
+
+/* modal */
+.self .mantine-Modal-content {
+  @apply h-full max-h-[90%] text-xl font-bold;
+}
+
+/* spotlight */
+.self .mantine-Spotlight-action:where([data-selected]) {
+  background-color: #067a6f;
+}
+
+/* animation (loader) */
+
+.loader {
+  width: 50px;
+  height: 50px;
+  background-color: #067a6f;
+  border-radius: 50%;
+  position: relative;
+  box-shadow:
+    0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
+    0 5px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 45%;
+  top: -40%;
+  background-color: #fff;
+  animation: wave 5s linear infinite;
+}
+.loader:before {
+  border-radius: 30%;
+  background: rgba(255, 255, 255, 0.4);
+  animation: wave 5s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
